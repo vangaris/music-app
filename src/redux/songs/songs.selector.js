@@ -1,10 +1,10 @@
 import { createSelector } from 'reselect'
 
-const selectShop = state => state.shop;
+const selectSongs = state => state.songs;
 
 export const selectCollections = createSelector(
-    [selectShop],
-    shop => shop.collections
+    [selectSongs],
+    songs => songs.collections
 )
 
 export const selectCollection = collectionUrlParam =>
@@ -13,8 +13,3 @@ export const selectCollection = collectionUrlParam =>
         collections => collections[collectionUrlParam]
     )
 
-
-export const selectCollectionsForPreview = createSelector(
-    [selectCollections],
-    collections => Object.keys(collections).map(key => collections[key])
-)

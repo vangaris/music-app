@@ -1,0 +1,17 @@
+.back {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .option{
+        margin: 1em auto;
+        color:red;
+        text-decoration: none;
+    }
+
+    &:hover {
+        font-weight: 700;
+        
+    }
+    
+  }
